@@ -1,4 +1,6 @@
 <?php
+    ini_set('display_errors',1);
+    error_reporting(E_ALL);
     INCLUDE 'config.php';
     GLOBAL $overwrite;
 
@@ -141,10 +143,10 @@
 
     function createXML()
     {
-        $xml = new SimpleXMLElement('<YeastarIPPhoneDirectory/>');
+        $xml = new SimpleXMLElement('<YealinkIPPhoneDirectory/>');
 
         global $first;
-        
+
         global $servername;
         global $username;
         global $password;
@@ -154,9 +156,11 @@
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
+	/* изменение набора символов на utf8mb4 */
+	$conn->set_charset("utf8mb4");
         // Check connection
         if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    	    die("Connection failed: " . $conn->connect_error);
         }
 
         $sql = "SELECT id, name FROM entry";
@@ -170,6 +174,7 @@
 
                 $DirectoryEntry = $xml->addChild('DirectoryEntry');
                 $DirectoryEntry->addChild('Name', $row["name"]);
+		//var_dump($row["name"]);
 
                 if ($result2->num_rows > 0) {
                     while($row2 = $result2->fetch_assoc()) {

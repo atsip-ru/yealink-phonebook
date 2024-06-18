@@ -1,14 +1,30 @@
 # Yealink_Phonebook
-A MariaDB based phonebook, which creates an xml file for Yealink phones.
+Телефонная книга на основе MariaDB, которая создает xml-файл для телефонов Yealink.
 
-Until now, it should be considered a beta version. So feel free to report bugs.
+До сих пор ее следует считать бета-версией, поэтому не стесняйтесь сообщать об ошибках.
 
-It is also recommended to protect the website with a password.
+Также рекомендуется защитить доступ паролем.
 
-# How to install it?
+# Как установить?
 
-Just set up a MariaDB and Apache2 Server and install phpMyAdmin for convenience.
-You should also consider installing all necessary and recommended modules for Apache.
+Просто настройте сервер MariaDB и Apache2 и установите phpMyAdmin для удобства.
+Также необходимо установить все необходимые и рекомендуемые модули для Apache.
 
-On slow servers or huge DBs the generation of the XML file can be quite slow. 
-Therefore, you should consider editing the php.ini and set the execution time to a higher number or to infinite, 0.
+На медленных серверах или огромных БД генерация XML-файла может происходить довольно медленно.
+Поэтому следует отредактировать php.ini и установить время выполнения на более высокое число или бесконечное, 0.
+
+## Установка без phpMyAdmin
+
+1. Клонировать в корень web-каталога
+```
+git clone https://github.com/atsip-ru/yealink-phonebook.git
+cd yealink-phonebook
+```
+2. Создать БД для номеров и дать права не-root юзеру
+```
+mysql -u root -p -e "CREATE DATABASE phonebook;"
+mysql -u root -p phonebook < entry.sql
+mysql -u root -p phonebook < numbers.sql
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON phonebook.* TO freepbxuser@localhost;"
+```
+3. Поправить файл config.php или это можно будет сделать в веб-интерфейсе

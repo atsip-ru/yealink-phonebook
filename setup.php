@@ -118,7 +118,7 @@
                     </tbody>
                 </table>
                 <br>
-                <input type="submit" name="btnSettings" value="Go" />
+                <input type="submit" name="btnSettings" value="OK" />
                 <br>
             </form>
         </div>

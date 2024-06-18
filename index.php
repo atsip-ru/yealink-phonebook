@@ -23,8 +23,8 @@
                 <li><a href="./create/">Добавить запись</a></li>
                 <li><a href="?xml=xml">Перенос записей на телефоны</a></li>
             </ul>
-                <input type="text" class="right" placeholder="Suchen" name="txtSuch" value = "<?php print $txtsuch; ?>"></input>
-                <input type="submit" class="right2" name="btnSuch" value="Go" />
+                <input type="text" class="right" placeholder="Поиск" name="txtSuch" value = "<?php print $txtsuch; ?>"></input>
+                <input type="submit" class="right2" name="btnSuch" value="Искать" />
         </div>
         
         <div class = "main">
