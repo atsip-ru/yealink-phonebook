@@ -8,7 +8,7 @@
     <body>
         <div>
 
-        <h2>Willkommen auf der Setup Seite</h2>
+        <h2>Добро пожаловать на страницу настроек</h2>
         <hr>
             <?php
                 global $overwrite;
@@ -58,18 +58,18 @@
                         }
                         else
                         {
-                            echo "Fehler: " . $ret[1] . "<hr>";
+                            echo "Ошибка: " . $ret[1] . "<hr>";
                         }
                     }
                 }
             ?>
             <form action="setup.php" methode="GET">
-                <p>Datenbank:</p>
+                <p>База данных:</p>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <p>DB Servername:</p>
+                                <p>Адрес БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="localhost" name="txtDBHost" value="<?php print htmlspecialchars($servername); ?>"></input>
@@ -77,7 +77,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB Name:</p>
+                                <p>Имя БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="phonebook" name="txtDBName" value="<?php print htmlspecialchars($dbname); ?>"></input>
@@ -85,7 +85,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB User:</p>
+                                <p>Пользователь БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="root" name="txtDBUser" value="<?php print htmlspecialchars($username); ?>"></input>
@@ -93,7 +93,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB Passwort:</p>
+                                <p>Пароль пользователя БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="admin123" name="txtDBPasswd" value="<?php print htmlspecialchars($password); ?>"></input>
@@ -104,12 +104,12 @@
                 
                 <hr>
 
-                <p>Speicherort XML:</p>
+                <p>Место хранения XML:</p>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <p>Speicherort:</p>
+                                <p>Место хранения:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="phonebook.xml" name="txtPhonebook" value="<?php print $phonebook; ?>"></input>

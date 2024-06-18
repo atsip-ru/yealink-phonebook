@@ -9,21 +9,21 @@
         <div class = "menu">
             <ul>
                 <li><p>Phonebook</p></li>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../settings/">Einstellungen</a></li>
+                <li><a href="../index.php">Домой</a></li>
+                <li><a href="../settings/">Настройки</a></li>
                 <li><div class="vl"></div></li>
-                <li><a href="../create/">Eintrag hinzufügen</a></li>
+                <li><a href="../create/">Добавить запись</a></li>
             </ul>
            </div>
         
         <div class = "main">
-            <p>Eintrag hinzufügen: </p>
+            <p>Добавить запись: </p>
             <br>
             <form action="index.php" methode="get">
-                Name: <input type="text" placeholder="Name" name="txtName"></input>
+                Имя: <input type="text" placeholder="Имя" name="txtName"></input>
                 <br><br>
-                <p>Nummern können kommagetrennt eingegeben werden:</p>
-                <textarea name="txtNum" cols="60" rows="8" placeholder="BSP: 1234,56789,12345"></textarea>
+                <p>Номера можно вводить через запятую:</p>
+                <textarea name="txtNum" cols="60" rows="8" placeholder="Напр.: 1234,56789,12345"></textarea>
                 <br><br>
                 <input type="submit" name="btnDo" value="Go" />
             </form>

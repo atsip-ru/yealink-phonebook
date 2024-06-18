@@ -8,15 +8,15 @@
         <div class = "menu">
             <ul>
                 <li><p>Phonebook</p></li>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../settings/">Einstellungen</a></li>
+                <li><a href="../index.php">Домой</a></li>
+                <li><a href="../settings/">Настройки</a></li>
                 <li><div class="vl"></div></li>
-                <li><a href="../create/">Eintrag hinzufügen</a></li>
+                <li><a href="../create/">Добавить запись</a></li>
             </ul>
         </div>
         
         <div class = "main">
-            <p>Einstellungen:</p>
+            <p>Настройки:</p>
             <hr>
             <form action="index.php" methode="GET">
                 <?php
@@ -32,12 +32,12 @@
 
                     global $phonebook;
                 ?>
-                <p>Datenbank:</p>
+                <p>База данных:</p>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <p>DB Servername:</p>
+                                <p>Сервер БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="localhost" name="txtDBHost" value="<?php print htmlspecialchars($servername); ?>"></input>
@@ -45,7 +45,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB Name:</p>
+                                <p>Имя БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="phonebook" name="txtDBName" value="<?php print htmlspecialchars($dbname); ?>"></input>
@@ -53,7 +53,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB User:</p>
+                                <p>Пользователь БД:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="root" name="txtDBUser" value="<?php print htmlspecialchars($username); ?>"></input>
@@ -61,10 +61,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>DB Passwort:</p>
+                                <p>Пароль пользователя:</p>
                             </td>
                             <td>
-                                <input type="text" placeholder="unverändert" name="txtDBPasswd"></input>
+                                <input type="text" placeholder="без изменений" name="txtDBPasswd"></input>
                             </td>
                         </tr>
                     </tbody>
@@ -72,12 +72,12 @@
                 
                 <hr>
 
-                <p>Speicherort XML:</p>
+                <p>Место хранения XML:</p>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <p>Speicherort:</p>
+                                <p>Место хранения:</p>
                             </td>
                             <td>
                                 <input type="text" placeholder="phonebook.xml" name="txtPhonebook" value="<?php print htmlspecialchars($phonebook); ?>"></input>

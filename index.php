@@ -17,18 +17,18 @@
                     }
                 ?>
                 <li><p>Phonebook</p></li>
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="./settings/">Einstellungen</a></li>
+                <li><a href="./index.php">Главная</a></li>
+                <li><a href="./settings/">Настройки</a></li>
                 <li><div class="vl"></div></li>
-                <li><a href="./create/">Eintrag hinzufügen</a></li>
-                <li><a href="?xml=xml">Einträge auf Telefone übernehmen</a></li>
+                <li><a href="./create/">Добавить запись</a></li>
+                <li><a href="?xml=xml">Перенос записей на телефоны</a></li>
             </ul>
                 <input type="text" class="right" placeholder="Suchen" name="txtSuch" value = "<?php print $txtsuch; ?>"></input>
                 <input type="submit" class="right2" name="btnSuch" value="Go" />
         </div>
         
         <div class = "main">
-            <p>Einträge: </p>
+            <p>Записи: </p>
 
             <?php
                 INCLUDE 'config.php';
@@ -135,7 +135,7 @@
                 }
             ?>
             <br>
-                <label for="selNumber">Elemente auf einer Seite: </label>
+                <label for="selNumber">Элементов на странице: </label>
                 <select name="selNumber">
                 <option selected="selected"><?php print $selNumber; ?></option>
                     <option value="10">10</option>
@@ -147,7 +147,7 @@
                 <br>
                 <br>
                 <input type="submit" value="-" name="btnM">
-                Seite: <input type="number" name="txtSeite" value="<?php print $txtSeite; ?>" min="1" max="<?php print $anzSeiten; ?>"></input>
+                Страница: <input type="number" name="txtSeite" value="<?php print $txtSeite; ?>" min="1" max="<?php print $anzSeiten; ?>"></input>
                 von: <?php print $anzSeiten; ?>
                 <input type="submit" value="+" name="btnP">
                 <input type="submit" value="Ok">
@@ -158,8 +158,8 @@
                     <tr>
                         <th></th>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Nummern</th>
+                        <th>Имя</th>
+                        <th>Номер</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -169,9 +169,9 @@
                 </tbody>
             </table>
             <br>
-            <p>Ausgewählte Elemente: </p>
-                <input type="submit" name="btnEdit" value="> Bearbeiten"/>
-                <input type="submit" name="btnDel" value="> Löschen"/>
+            <p>Отдельные элементы: </p>
+                <input type="submit" name="btnEdit" value="> Редактировать"/>
+                <input type="submit" name="btnDel" value="> Удалить"/>
 
                 <input type="hidden" name="x" value="<?php print $x - 1; ?>">
         </div>
